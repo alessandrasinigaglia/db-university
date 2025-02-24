@@ -1,0 +1,63 @@
+1)
+SELECT *
+FROM students
+INNER JOIN degrees
+ON degrees.id = students.degrees_id
+WHERE `degrees` = 'Economia'
+
+2)
+SELECT *
+FROM degrees
+INNER JOIN departments
+ON departments.id = degrees.departments_id
+WHERE departments = 'Neuroscienze' AND level = 'Magistrale'
+
+3)
+SELECT *
+FROM courses
+INNER JOIN teacher
+ON teachers.id = courses_id
+WHERE teacher_id = 44
+
+4)
+SELECT *
+FROM students
+INNER JOIN courses
+ON departments
+ORDER BY `surname` ASC AND `name` ASC
+
+5)
+SELECT *
+FROM degrees
+INNER JOIN courses 
+ON courses.id = teacher_id
+
+6)
+SELECT *
+FROM teacher
+INNER JOIN departments
+ON departments.id = teacher_id
+WHERE departments = 'Matematica'
+---------------------
+
+1)
+SELECT COUNT(*)
+FROM students
+GROUP BY anno
+
+2)
+SELECT COUNT(*)
+FROM Teachers
+GROUP BY office_address
+
+3)
+SELECT COUNT(*)
+FROM exam_student
+GROUP BY exam_id
+
+4)
+SELECT COUNT(*)
+FROM degrees
+GROUP BY department_id
+
+
